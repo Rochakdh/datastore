@@ -1,0 +1,48 @@
+html{
+    box-sizing: border-box;
+}
+*::before, * ::after
+{
+    box-sizing: inherit;
+}
+
+body{
+    /* background-image: linear-gradient(to right,rgba(44, 73, 80, 0.945),rgba(17, 140, 255, 0.7)); */
+    background-image: url(../image/image5.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left;
+    
+}
+p{
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.main-content-wrap{
+    height: 540px;
+    width: 80%;
+    margin-top: 100px;
+    /* background-color: rgb(17, 167, 187); */
+}
+.table{
+    color:white;
+}
+.table-teal{
+    background: teal;
+}
+.form-group{
+    color: white;
+    font-size: large;
+}
+.main-content-wrap-form{
+    height: auto;
+    width: 80%;
+    margin-top: 100px;
+   
+    padding: 0px;
+}
+
+.btn{
+    padding:8px !important;
+}
+

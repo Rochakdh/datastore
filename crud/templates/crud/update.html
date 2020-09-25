@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rochak Dhakal</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+  <!-- Internal Section Start-->
+  <section class="major-body-section">
+    <div class="container main-content-wrap-form">
+         <form action="{% url 'crud:home' %}">
+            <button type="submit" class="btn btn-primary btn-sm ">Home</button>
+        </form>
+        <br>
+      <form method="post">
+          {% csrf_token %}
+        <div class="form-group">
+          <label for="formGroupExampleInput">Name</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name" name="name" value="{{ object.name }}">
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2">Email</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Email" name="email" value="{{ object.email }}">
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2">Number</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Number" name="number" value="{{ object.number }}">
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2">Address</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Address" name="address" value="{{ object.address }}">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Update</button>
+      </form>
+        <br>
+        <form action="{% url 'crud:table' %}">
+            <button type="submit" class="btn btn-success btn-lg btn-block">Table</button>
+        </form>
+
+    </div>
+  </section>
+
+
+  <!-- Internal Section  End-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
