@@ -13,7 +13,7 @@ class ProfileCreate(CreateView):
     template_name = 'crud/index.html'
     form_class = PersonalDetailsForm
     success_url = reverse_lazy('crud:table')
-    http_method_names = ['post']
+
 
 class ProfileDelete(DeleteView):
     model = PersonalDetails
